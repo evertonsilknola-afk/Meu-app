@@ -1,10 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,body,#root{margin:0;height:100%}
-body{background:#f1f5f9;-webkit-tap-highlight-color:transparent;overscroll-behavior:none;font-family:system-ui,sans-serif}
-.safe-t{padding-top:env(safe-area-inset-top)}
-.safe-b{padding-bottom:env(safe-area-inset-bottom)}
-@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.up{animation:up .25s ease both}
-input,select,textarea{font-size:16px}
+
+html, body, #root { 
+  margin: 0; 
+  height: 100%; 
+  background-color: #09090b; /* Fundo super escuro (quase preto) */
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  font-family: system-ui, sans-serif;
+  color: #f4f4f5;
+}
+
+.safe-t { padding-top: env(safe-area-inset-top); }
+.safe-b { padding-bottom: env(safe-area-inset-bottom); }
+
+@keyframes up { 
+  from { opacity: 0; transform: translateY(6px); } 
+  to { opacity: 1; transform: none; } 
+}
+.up { animation: up .25s ease both; }
+
+/* Adapta os inputs para o tema escuro nativo */
+input, select, textarea { 
+  font-size: 16px; 
+  color-scheme: dark; 
+}
